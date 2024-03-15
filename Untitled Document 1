@@ -1,0 +1,41 @@
+1. mkdir justlinux
+2. cd justlinux; wget -O latihan.zip "https://drive.google.com/uc?export=download&id=1V35Y4mZo6HFNclvBi80v484KWRLo6sJI"
+or 
+cd justlinux; wget -O latihan.zip 'https://docs.google.com/uc?export=download&id=1V35Y4mZo6HFNclvBi80v484KWRLo6sJI'
+
+3. unzip latihan.zip -d "latihan" 
+
+4. cd latihan;ls
+
+5. chmod +x runme.sh; ./runme.sh; chmod +x daemon.sh; ./daemon.sh
+
+6. ps aux
+
+7. kill -9 (masukkan PID sesuai program yg running) [PID /bin/bash ./daemon.sh]
+
+8. ps aux | grep daemon.sh
+
+9. getent passwd or maybe cat /etc/passwd
+
+10. sudo adduser sisopmudah or useradd sisopmudah
+
+11. sudo usermod -aG sudo sisopmudah
+
+12. sudo getent group sudo
+
+13. sudo -S su - sisopmudah -c "mkdir puzzle; /bin/bash"
+
+14. sudo -S su - b3njm1n -c "cd /home/b3njm1n/justlinux/latihan; /bin/bash"
+
+15. sudo -S unzip s3cr3t_v4u1t.zip
+
+16. sudo -S su - sisopmudah -c "cd /home/sisopmudah/puzzle; /bin/bash"  masih nyampe sini
+
+17. echo "Enigma:" > encryption.txt; sudo -S grep -r -l -e 'enigma' /home/b3njm1n/justlinux/latihan/s3cr3t_v4u1t/ | wc -l >> encryption.txt;
+
+18. echo "Unknown:" >> encryption.txt; sudo -S grep -r -l -e 'unknown' /home/b3njm1n/justlinux/latihan/s3cr3t_v4u1t/ | wc -l >> encryption.txt; cat encryption.txt
+
+19. sudo -S find /home/b3njm1n/justlinux/latihan/s3cr3t_v4u1t -type f -exec tail -n 1 {} + >> last.txt; xxd -r -p last.txt > translated.txt; grep -Pao "flag\{.*?\}" translated.txt > flag.txt; cat flag.txt
+
+20. git config --global user.email "bkhbizma@gmail.com" && git config --global user.name "Benyaminsan" && git init && git add flag.txt && git commit -m "SemakinDidepan" && git branch -M main && git remote add origin https://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@github.com/Benyaminsan/Pelatihan-Linux-'24.git && git push -u origin main
+
